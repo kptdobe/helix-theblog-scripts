@@ -4,9 +4,13 @@ const fg = require('fast-glob');
 
 const CSV = require('./CSV.ts');
 
-const MAPPING_FILE = `./mappings/jp.csv`;
-const SRC_FOLDER = `/Users/acapt/Adobe/The Blog - Documents/theblog/jp/publish/2008`;
+// CONFIG
+const CSV_MAPPING_FILE = `./mappings/jp.csv`;
+const OLD_TAG_COLUMN = 'OldTag'; // column with legacy blog tag
+const TOPIC1_COLUMN = 'Topic1'; // column with corresponding Helix blog tag
+const TOPIC2_COLUMN = 'Topic2'; // column with another corresponding Helix blog topic (some old tags map to 2 new topic)
 
+const SRC_FOLDER = `/Users/acapt/Adobe/The Blog - Documents/theblog/jp/publish`;
 const SIMULATION = true;
 
 async function asyncForEach(array, callback) {
@@ -17,14 +21,14 @@ async function asyncForEach(array, callback) {
 
 const getMapping = async () => {
   const map = {};
-  const csv = await fs.readFile(MAPPING_FILE);
+  const csv = await fs.readFile(CSV_MAPPING_FILE);
   const entries = CSV.toArray(csv.toString());
   entries.forEach(item => {
-    const old = item['OldTag'].toLowerCase().trim()
+    const old = item[OLD_TAG_COLUMN].toLowerCase().trim()
     map[old] = [];
-    map[old].push(item['Topic1']);
-    if (item['Topic2'] && item['Topic2'].trim() !== '') {
-      map[old].push(item['Topic2']);
+    map[old].push(item[TOPIC1_COLUMN]);
+    if (item[TOPIC2_COLUMN] && item[TOPIC2_COLUMN].trim() !== '') {
+      map[old].push(item[TOPIC2_COLUMN]);
     }
   });
   return map;
