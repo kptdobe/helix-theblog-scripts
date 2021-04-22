@@ -2,10 +2,9 @@ const fs = require('fs-extra');
 const path = require('path');
 const fg = require('fast-glob');
 
-// const SRC_FOLDER = `/Users/acapt/work/dev/helix/theblog/theblog-regional-importer/output/sparkmake/round3`;
-// const TARGET_FOLDER = `/Users/acapt/Adobe/CC Express - website`;
-const SRC_FOLDER = `/Users/acapt/work/dev/helix/helix-importer-projects/output/creative/fr`;
-const TARGET_FOLDER = `/Users/acapt/Adobe/The Blog - Documents/theblog/fr/publish`;
+const SRC_FOLDER = `/Users/acapt/work/dev/helix/helix-importer-projects/output/sparkblog/round8`;
+// const SRC_FOLDER = `/Users/acapt/work/dev/helix/helix-importer-projects/output/sparkmake/round7`;
+const TARGET_FOLDER = `/Users/acapt/Adobe/CC Express - website/drafts/alex/import/md`;
 
 const SIMULATION = true;
 const MOVE = false;
@@ -21,11 +20,8 @@ async function main() {
     cwd: SRC_FOLDER
   });
   
-  // console.log(entries);
   let copied = 0;
   
-  //let output = 'AdobeLifeURL;HelixURL;\n';
-
   await asyncForEach(entries, async (src) => {
     const sourcePath = path.join(SRC_FOLDER, src);
     const targetPath = path.join(TARGET_FOLDER, src);
@@ -37,11 +33,11 @@ async function main() {
       const t = await fs.readFile(targetPath);
 
       if (s.toString() !== t.toString()) {
-        console.log(`Target file ${targetPath} has different content. Copying...`);
+        console.log(`HAS DIFFERENT CONTENT - Target file ${targetPath} has different content. Copying...`);
         diff = true;
       }
     } else {
-      console.log(`Target file ${targetPath} does not exist. Copying...`);
+      console.log(`DOES NOT EXIST - Target file ${targetPath} does not exist. Copying...`);
       diff = true;
     }
 
