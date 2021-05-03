@@ -4,7 +4,7 @@ const fg = require('fast-glob');
 
 const SRC_FOLDER = `/Users/acapt/Adobe/Spark Helix - website`;
 const TARGET_FOLDER = `/Users/acapt/Adobe/CC Express - Documents/website`;
-const LASTDIFF = 1619024120433;
+const LASTDIFF = 1619769803737;
 
 const SIMULATION = true;
 
@@ -16,9 +16,6 @@ async function asyncForEach(array, callback) {
 
 async function main() {
   const entries = await fg('**/*.{docx,xlsx,xml}', {
-  // const entries = await fg('**/*.docx', {
-  // const entries = await fg('**/gfx.{docx,xlsx}', {
-  // const entries = await fg('**/drafts/alex/*.{docx,xlsx}', {
     cwd: SRC_FOLDER,
     ignore: ['**/drafts/**', '**/query-index.xlsx']
   });
@@ -46,7 +43,11 @@ async function main() {
         output += `Modified in Spark -> updated in Express,${src},\n`;
       } else if (tStat.mtimeMs > sStat.mtimeMs) {
         // console.log(`TARGET FILE MODIFIED - ${targetPath} has been modified after source file. DOING NOTHING`);
-        output += `Modified in Express -> do not nothing,${src},\n`;
+        if (tStat.mtimeMs > LASTDIFF+1) {
+          output += `New modified in Express -> do nothing,${src},\n`;
+        } else {
+          output += `Updated once in Express -> do nothing,${src},\n`;
+        }
       // } else {
         // console.log(`NOT SAME SIZE BUT SAME DATE... ? ${targetPath}`);
       }
