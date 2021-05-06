@@ -1,0 +1,24 @@
+{
+  "name": "theblog-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adobe/helix-markdown-support": "1.4.0",
+    "@adobe/helix-word2md": "git+https://github.com/adobe/helix-word2md.git",
+    "fast-glob": "3.2.4",
+    "fs-extra": "9.0.1",
+    "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.0",
+    "remark-gfm": "1.0.0",
+    "remark-parse": "9.0.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "unified": "9.2.1"
+  }
+}

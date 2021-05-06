@@ -1,0 +1,135 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Merge folders",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/mergefolders.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Topics",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/topics.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Topics URL",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/topicsurls.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "CopyDiffOnly",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/copydiffonly.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "CopyDiffOnly docx",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/copydiffonlydate.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "CopyDoNotExistOnly",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/copydonotexistonly.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Move",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/move.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Move UK",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/moveuk.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Diff Index",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/diffindex.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Translate",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/translate.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Patch Topics",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/patchtopics.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Map Topics",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/maptopics.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Diff JSON",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/diffjson.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Convert md to docx",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/md2docx.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Uncache",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/uncache.js"
+    }
+  ]
+}
