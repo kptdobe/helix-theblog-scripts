@@ -4,7 +4,7 @@ const fg = require('fast-glob');
 
 const SRC_FOLDER = `/Users/acapt/Adobe/Spark Helix - website`;
 const TARGET_FOLDER = `/Users/acapt/Adobe/CC Express - Documents/website`;
-const LASTDIFF = 1619769803737;
+const LASTDIFF = 1620119366235;
 
 const SIMULATION = true;
 

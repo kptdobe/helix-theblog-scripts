@@ -11,6 +11,7 @@
   "dependencies": {
     "@adobe/helix-markdown-support": "1.4.0",
     "@adobe/helix-word2md": "git+https://github.com/adobe/helix-word2md.git",
+    "exceljs": "4.3.0",
     "fast-glob": "3.2.4",
     "fs-extra": "9.0.1",
     "jsdom": "^16.4.0",

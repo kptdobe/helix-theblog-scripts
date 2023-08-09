@@ -130,6 +130,14 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/uncache.js"
+    },{
+      "type": "node",
+      "request": "launch",
+      "name": "Folder diff",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/folderdiff.js"
     }
   ]
 }
